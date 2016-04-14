@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="tunely">
+<html lang="en" ng-app="geoquakes">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>tunely</title>
+    <title>geoquakes</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
+    <script src='/vendor/lodash/lodash.js'></script>
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular-route/angular-route.min.js"></script>
+    <script src='/vendor/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+    <script src='/vendor/angular-google-maps/dist/angular-google-maps.min.js'></script>
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/AlbumsIndexController.js"></script>
-    <script src="/scripts/controllers/AlbumsShowController.js"></script>
+    <script src="/scripts/controllers/EarthquakesIndexController.js"></script>
 
   </head>
   <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Welcome to tunely</h1>
-        <p>Your music binder!</p>
-      </div>
-    </div>
-
+    <h1 class="text-center">geoquakes-angular</h1>
     <div ng-view></div>
   </body>
 

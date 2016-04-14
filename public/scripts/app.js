@@ -5,24 +5,27 @@
  */
 
 angular
-  .module('tunely', ['ngRoute'])
+  .module('geoquakes', ['ngRoute', 'uiGmapgoogle-maps'])
   .config(config);
 
-function config ($routeProvider, $locationProvider) {
+config.$injext = ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider'];
+
+function config ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/albums',
-      controllerAs: 'albumsIndexCtrl',
-      controller: 'AlbumsIndexController'
-    })
-    .when('/:id', {
-      templateUrl: 'templates/albums-show',
-      controllerAs: 'albumsShowCtrl',
-      controller: 'AlbumsShowController'
-    })
+      templateUrl: 'templates/earthquakes',
+      controllerAs: 'earthquakesIndexCtrl',
+      controller: 'EarthquakesIndexController'
+    });
 
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
+
+  uiGmapGoogleMapApiProvider.configure({
+      key: 'AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg',
+      v: '3.20', //defaults to latest 3.X anyhow
+      libraries: 'weather,geometry,visualization'
   });
 }
