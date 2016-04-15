@@ -1,5 +1,5 @@
 angular
-  .module('tunely')
+  .module('geoquakes')
   .controller('EarthquakesIndexController', EarthquakesIndexController);
 
 EarthquakesIndexController.$inject = ['$http'];
