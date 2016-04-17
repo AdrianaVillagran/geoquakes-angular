@@ -2,20 +2,12 @@ angular
   .module('geoquakes', ['ngRoute', 'uiGmapgoogle-maps'])
   .config(config);
 
-config.$injext = ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider'];
+config.$injext = ['uiGmapGoogleMapApiProvider'];
 
-function config ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'templates/earthquakes.html',
-      controllerAs: 'earthquakesIndexCtrl',
-      controller: 'EarthquakesIndexController'
-  });
-
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  });
+function config (uiGmapGoogleMapApiProvider) {
+  // ...
+  // fill this in
+  // ...
 
   uiGmapGoogleMapApiProvider.configure({
     key: 'AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg',
