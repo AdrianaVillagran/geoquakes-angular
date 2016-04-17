@@ -2,9 +2,8 @@ angular
   .module('geoquakes', ['ngRoute', 'uiGmapgoogle-maps'])
   .config(config);
 
-config.$injext = ['uiGmapGoogleMapApiProvider'];
-
-function config (uiGmapGoogleMapApiProvider) {
+config.$inject = ['uiGmapGoogleMapApiProvider'];
+function config (  uiGmapGoogleMapApiProvider  ) {
   // ...
   // fill this in
   // ...
