@@ -3,12 +3,11 @@ angular
   .controller('EarthquakesIndexController', EarthquakesIndexController);
 
 EarthquakesIndexController.$inject = ['$http'];
-
-function EarthquakesIndexController ($http) {
-
-  var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
+function EarthquakesIndexController (  $http  ) {
   var vm = this;
+  var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
   vm.map = { center: { latitude:  37.78, longitude: -122.44 }, zoom: 2 };
+  vm.earthquakes = [];
 
   $http({
     method: 'GET',

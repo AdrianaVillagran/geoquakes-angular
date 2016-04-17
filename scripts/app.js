@@ -2,9 +2,9 @@ angular
   .module('geoquakes', ['ngRoute', 'uiGmapgoogle-maps'])
   .config(config);
 
-config.$injext = ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider'];
 
-function config ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
+config.$inject = ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider'];
+function config (  $routeProvider,   $locationProvider,   uiGmapGoogleMapApiProvider ) {
   $routeProvider
     .when('/', {
       templateUrl: 'templates/earthquakes.html',
