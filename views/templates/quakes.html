@@ -1,6 +1,7 @@
 <h1 class="text-center">geoquakes-angular</h1>
 <div class="container">
   <div class="row">
+    <div class="col-sm-8">
       <ui-gmap-google-map center='quakesIndexCtrl.map.center' zoom='quakesIndexCtrl.map.zoom'>
         <ui-gmap-marker ng-repeat='quake in quakesIndexCtrl.quakes'
                         idKey='{id: quake.id }'
@@ -15,7 +16,19 @@
             </ui-gmap-window>
         </ui-gmap-marker>
       </ui-gmap-google-map>
-
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center" style="color:red;">Earthquakes</h3>
+      <div id="quakelist">
+        <ul>
+          <li style="list-style-type:none" ng-repeat="quake in quakesIndexCtrl.quakes">
+            <h4>{{quake.properties.title}}</h4>
+            <p>
+              Latitude: {{quake.geometry.coordinates[1]}}, Longitute: {{quake.geometry.coordinates[0]}}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-
 </div>
