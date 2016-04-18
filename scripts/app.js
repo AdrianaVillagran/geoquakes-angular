@@ -5,7 +5,7 @@ angular
 config.$inject = ['uiGmapGoogleMapApiProvider'];
 function config (  uiGmapGoogleMapApiProvider  ) {
   // ...
-  // fill this in
+  // fill this in with $routeProvider and $locationProvider
   // ...
 
   uiGmapGoogleMapApiProvider.configure({
